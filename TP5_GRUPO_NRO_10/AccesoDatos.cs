@@ -89,6 +89,7 @@ namespace TP5_GRUPO_NRO_10
             conexion.Close();
         }
 
+        //PUNTO 7 EJERCICIO 2
         public void CargarGrillaSucursales(GridView gvSucursales)
         {
             string consulta = "SELECT Sucursal.Id_Sucursal, Sucursal.NombreSucursal, Sucursal.DescripcionSucursal, Provincia.DescripcionProvincia ,Sucursal.DireccionSucursal FROM Sucursal INNER JOIN Provincia ON Sucursal.Id_ProvinciaSucursal = Provincia.Id_Provincia";
@@ -103,6 +104,7 @@ namespace TP5_GRUPO_NRO_10
             cerrarConexion();
         }
 
+        //PUNTO 8 EJERCICIO 2
         public void FiltrarGrilla(GridView gvSucursales, TextBox txtId)
         {
             string consulta = "SELECT Sucursal.Id_Sucursal, Sucursal.NombreSucursal, Sucursal.DescripcionSucursal, Provincia.DescripcionProvincia ,Sucursal.DireccionSucursal FROM Sucursal INNER JOIN Provincia ON Sucursal.Id_ProvinciaSucursal = Provincia.Id_Provincia WHERE Sucursal.Id_Sucursal =" + txtId.Text;
@@ -119,6 +121,7 @@ namespace TP5_GRUPO_NRO_10
             cerrarConexion();
         }
 
+        //PUNTO 8 EJERCICIO 3
         public void EliminarSucursal(TextBox txtIdSucursal, Label lblMensaje)
         {
             string consulta = "DELETE FROM Sucursal WHERE Sucursal.Id_Sucursal=" + txtIdSucursal.Text;
