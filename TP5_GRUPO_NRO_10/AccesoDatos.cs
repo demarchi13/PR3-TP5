@@ -70,6 +70,7 @@ namespace TP5_GRUPO_NRO_10
                 conexion.Close();
         }
 
+        //PUNTO 6 EJERCICIO 1
         public void CargarDdlProvincia(DropDownList ddlProvincias)
         {
             string consulta = "SELECT Id_Provincia, DescripcionProvincia FROM Provincia";
